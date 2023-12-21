@@ -19,7 +19,13 @@
     @apply text-[26px] font-[700] text-headingColor; /* Removed loading-[26px] */
   }
   .text__para {
-    @apply text-[18px] loading-[30px] font-[400] text-textColor mt-[18px];
+    @apply text-[18px]  font-[400] text-textColor mt-[18px];  /* Removed loading-[30px] */
+  }
+  .header{
+    @apply bg-[url('./assets/images/mask.png')] bg-no-repeat bg-center bg-cover w-full h-[90px] leading-[100px]
+  }
+  .hero__section{
+    @apply bg-[url('./assets/images/hero-bg.png')] bg-no-repeat bg-center bg-cover;
   }
 }
 
@@ -34,7 +40,7 @@
 
 @media only screen and (max-width: 768px) {
   .heading {
-    @apply text-[26px] leading-[36px] ; /* Check if loading-[36px] is defined in your code or remove it */
+    @apply text-[26px] ; /*leading-[36px]  Check if loading-[36px] is defined in your code or remove it */
   }
   .text__para {
     @apply text-[16px] leading-7 mt-3;
