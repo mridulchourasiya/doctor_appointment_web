@@ -1,8 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { BsArrowRight } from "react-icons/bs";
+
 import heroImg01 from "../assets/images/hero-img01.png";
 import heroImg02 from "../assets/images/hero-img02.png";
 import heroImg03 from "../assets/images/hero-img03.png";
-
+import icon01 from "../assets/images/icon01.png";
+import icon02 from "../assets/images/icon02.png";
+import icon03 from "../assets/images/icon03.png";
+import About from "../components/About/About";
+import featureImg from "../assets/images/feature-img.png";
+import ServiceList from "../components/Service/ServiceList";
 const Home = () => {
   return (
     <>
@@ -69,6 +77,156 @@ const Home = () => {
         </div>
       </section>
       {/* hero section end */}
+
+      <section>
+        <div className="container">
+          <div className="lg:w-[470px] mx-auto">
+            <h2 className="heading text-center">
+              Providing the best medical services
+            </h2>
+            <p className="text__para text-center">
+              World-class care for everyone.our health system offer unmatched
+              expert health care.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-[30px] lg:mt-[55px]">
+            <div className="py-[30px] px-5">
+              <div className="flex items-center justify-center">
+                <img src={icon01} alt="" />
+              </div>
+
+              <div className="mt-[30px]">
+                <h2 className="text-[26px] leading-9 text-headingColor font-[700] text-center">
+                  Find a Doctor
+                </h2>
+                <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center">
+                  World-Class care for everyone. our health system offers
+                  unmatched, expert healthcare professionals who are dedicated
+                  to providing you with top-notch service.
+                </p>
+
+                <Link
+                  to="/doctors"
+                  className="w-[44px] h-[44px] rounded-full border border-solid border-[#181A1E] mt-[30px] mx-auto
+                flex items-center justify-center group hover:bg-primaryColor
+                hover:border-none"
+                >
+                  <BsArrowRight className="group-hover:text-white w-7 h-6" />
+                </Link>
+              </div>
+            </div>
+            {/* frist section */}
+            <div className="py-[30px] px-5">
+              <div className="flex items-center justify-center">
+                <img src={icon02} alt="" />
+              </div>
+
+              <div className="mt-[30px]">
+                <h2 className="text-[26px] leading-9 text-headingColor font-[700] text-center">
+                  Find a Location
+                </h2>
+                <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center">
+                  Navigate Your Health Journey: Find, Book, and Experience
+                  Doctor Appointments Seamlessly on Our Convenient and
+                  User-Friendly Platform.
+                </p>
+
+                <Link
+                  to="/doctors"
+                  className="w-[44px] h-[44px] rounded-full border border-solid border-[#181A1E] mt-[30px] mx-auto
+                flex items-center justify-center group hover:bg-primaryColor
+                hover:border-none"
+                >
+                  <BsArrowRight className="group-hover:text-white w-7 h-6" />
+                </Link>
+              </div>
+            </div>
+            {/* Second Section */}
+            <div className="py-[30px] px-5">
+              <div className="flex items-center justify-center">
+                <img src={icon03} alt="" />
+              </div>
+
+              <div className="mt-[30px]">
+                <h2 className="text-[26px] leading-9 text-headingColor font-[700] text-center">
+                  Book Appointment
+                </h2>
+                <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center">
+                  World-Class care for everyone. our health system offers
+                  unmatched, expert healthcare professionals who are dedicated
+                  to providing you with top-notch service.
+                </p>
+
+                <Link
+                  to="/doctors"
+                  className="w-[44px] h-[44px] rounded-full border border-solid border-[#181A1E] mt-[30px] mx-auto
+                flex items-center justify-center group hover:bg-primaryColor
+                hover:border-none"
+                >
+                  <BsArrowRight className="group-hover:text-white w-7 h-6" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Third section */}
+          </div>
+        </div>
+      </section>
+      <About />
+
+      {/* service Section start */}
+      <section>
+        <div className="container">
+          <div className="xl:w-[470px] mx-auto">
+            <h2 className="heading text-center ">Our Medical Service</h2>
+            <p className="text__para text-center">
+              Our medical services include a wide range of procedures and system
+              are world class
+            </p>
+          </div>
+          {/* list section */}
+
+          <ServiceList />
+        </div>
+      </section>
+      {/* service Section end */}
+
+      {/* Feacture Section start */}
+      <section>
+        <div className="container">
+          <div className="flex items-center justify-between flex-col lg:flex-row">
+            {/* Feacture content */}
+            <div className="xl:w-[670px]">
+              <h2 className="heading">
+                Get vritual tratement <br /> anytime.
+              </h2>
+
+              <ul className="pl-4">
+                <li className="text__para">
+                  1. Schdule the appoitement directly.
+                </li>
+                <li className="text__para">
+                  2. Search for your physician here, and context their office.
+                </li>
+                <li className="text__para">
+                  3. View our physician who are accpeting now patient, use the
+                  online scheduling tool to select an Appointment time.
+                </li>
+              </ul>
+              <Link to="/">
+                <button className="btn">Learn More</button>
+              </Link>
+            </div>
+
+            {/* Feacture img */}
+            <div className="relative z-10 lx:w-[770px] flex justify-end mt-[50px] lg:mt-0">
+              <img src={featureImg} className="w-3/4" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* feacture Section end */}
     </>
   );
 };
